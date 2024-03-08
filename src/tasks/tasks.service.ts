@@ -46,6 +46,7 @@ export class TasksService {
   }
 
   deleteTaskById(id: string): void {
+    // can add validation to throw error when id is not present -> getTaskById
     const index: number = this.tasks.findIndex((task) => task.id === id);
     this.tasks.splice(index, 1);
   }
