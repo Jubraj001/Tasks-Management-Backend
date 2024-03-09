@@ -18,7 +18,7 @@ import { Task } from './task.entity';
 export class TasksController {
   constructor(private tasksService: TasksService) {}
 
-  @Get() // Define the method(GET, POST, PUT, DELETE) and route which this method will handle
+  @Get() // Define the method (GET, POST, PUT, DELETE) and route which this method will handle
   getTasks(@Query() filterDto: GetTasksFilterDto): Promise<Task[]> {
     return this.tasksService.getTasks(filterDto);
   }
