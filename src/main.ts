@@ -10,7 +10,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe()); // Whenever NestJs encounters any of the validation decorators, it will execute validation Pipes
   app.useGlobalInterceptors(new TransformInterceptor());
 
-  const port = 3000;
+  const port = process.env.PORT;
   await app.listen(port);
   logger.log(`Application listening on port ${port}`);
 }

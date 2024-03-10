@@ -18,7 +18,13 @@ import { configValidationSchema } from './config.schema';
       inject: [ConfigService], // We want to inject the ConfigService
       useFactory: async (configService: ConfigService) => {
         // Async function which nest js calls, whatever is returned from this will be the config for the module
+
+        const isProduction = configService.get('STAGE') === 'prod';
         return {
+          ssl: isProduction,
+          extra: {
+            ssl: isProduction ? { rejectUnauthorized: false } : null,
+          },
           type: 'postgres',
           autoLoadEntities: true,
           synchronize: true,
