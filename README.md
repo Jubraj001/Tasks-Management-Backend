@@ -9,4 +9,5 @@
   - Use of Data Transfer Objects (DTO)
   - Repository to access db tables using TypeORM
 # Schema
-![image](https://github.com/Jubraj001/Tasks-Management-Backend/assets/87275263/07f980ab-c50a-47bd-ab2c-8d752cecf9e2)
+![image](https://github.com/Jubraj001/Tasks-Management-Backend/assets/87275263/96948657-8978-4a4a-b262-6d63ca664a1e)
+
